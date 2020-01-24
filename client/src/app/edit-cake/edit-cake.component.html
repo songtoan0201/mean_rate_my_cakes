@@ -1,0 +1,15 @@
+<div *ngIf="average != 0">
+    <h4>Baker's Name: {{ theCake.baker }}</h4>
+    <div class="imgContainer">
+        <img src="{{theCake.imgLink}}" alt="Cake">
+    </div>
+    <div>
+        <ul>
+            <p>Average Rating: {{average}}</p>
+            <li *ngFor="let rating of theCake._ratings" >
+                <p>Comment: {{rating.content}}</p>
+                <p>Score: {{rating.value}} stars</p>
+            </li>
+        </ul>
+    </div>
+</div>

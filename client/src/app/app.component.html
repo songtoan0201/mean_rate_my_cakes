@@ -1,0 +1,19 @@
+<div class="container-fluid">
+        <div class="row alert alert-info">
+            <h2 class="mx-auto">Welcome to Rate My Cakes</h2>
+        </div>
+        <div class="root row justify-content-around">
+            <div class="createBox col-5 stickyTop ">
+                <app-create-cake></app-create-cake>
+                <div *ngIf="theCake">
+                    <app-edit-cake [theCake]="theCake" [average]="averageRating"></app-edit-cake>
+                </div>
+            </div>
+            <div class="createBox col-6 cakesviewer">
+                <div *ngFor="let cake of allCakes">
+                    <app-show-all-cakes [OneCake]="cake" [editing]="editing"></app-show-all-cakes>
+                </div>
+            </div>
+
+        </div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <div style="color: red; padding: 5px 0px;" *ngFor="let key of errors; index as i">
+        {{errors[i]}}
+    </div>
+    <form (submit)="onSubmitCreateCake()" class="form-group">
+        <div class="row pt-2">
+            <label name="newCake.baker">Baker's Name: </label>
+            <input class="form-control" type="text" name="newCake.baker" [(ngModel)]="newCake.baker" />
+        </div>
+        <div class="row pt-2">
+            <label name="newCake.imgLink">Image Link: </label>
+            <input class="form-control" type="text" name="newCake.imgLink" [(ngModel)]="newCake.imgLink" />
+        </div>
+        <input class="btn btn-small btn-outline-success mt-3" type="submit" value="Create New Cake" />
+    </form>
+</div>

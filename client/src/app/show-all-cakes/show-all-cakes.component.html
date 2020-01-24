@@ -1,0 +1,37 @@
+<div class="detailsCake container">
+    Baker: <span class="bold"></span> {{OneCake.baker}} <br> {{ i }}
+    <div (click)="OpenEditComponent(OneCake._id)" class="imgContainer">
+        <img src="{{OneCake.imgLink}}" alt="Cake">
+    </div>
+    <form class="form-group" (submit)="onSubmitCreateRating(OneCake._id)">
+        <div style="color: red; padding: 5px 0px;" *ngFor="let key of errors; index as i">
+            {{errors[i]}}
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label for="newRating.value">Rating: </label>
+            </div>
+            <div class="col-6">
+                <select class="form-control" type="number" name="newRating.value" [(ngModel)]="newRating.value">
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-4" name="newRating.content">Comment:</label>
+            <input class="form-control col-6" type="text" name="newRating.content" [(ngModel)]="newRating.content" />
+        </div>
+        <div class="row justify-content-center pt-2">
+            <input class="btn btn-small btn-outline-primary pr-3" type="submit" value="Rate!" />
+            <button class="btn btn-small btn-outline-danger pl-3" (click)="deleteCake(OneCake._id)">Delete Me</button>
+        </div>
+
+    </form>
+    <div class="row justify-content-end">
+
+    </div>
+</div>

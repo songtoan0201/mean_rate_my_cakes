@@ -1,0 +1,21 @@
+.stickyTop {
+    position: sticky;
+    top: 0;
+    vertical-align: top;
+}
+.root{
+    /* margin: 0px auto; */
+    text-align: center;
+}
+.createBox{
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1%;
+    /* text-align: left; */
+}
+.cakesviewer{
+    height:700px;
+    overflow-y:auto;
+    padding-top:1%;
+}
